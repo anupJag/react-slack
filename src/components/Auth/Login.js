@@ -40,7 +40,6 @@ export default (props) => {
                     console.log(signedInUser);
                 })
                 .catch(err => {
-                    console.log(err);
                     let tempError = [];
                     setErrors(tempError.concat(err));
                     setLoading(false);
@@ -59,7 +58,6 @@ export default (props) => {
     //Show Error message
     const displayError = (error) => (error.map((err, i) => <p key={i}>{err.message}</p>));
 
-    //console.log(errors);
 
     return (
         <Grid textAlign="center" verticalAlign="middle" className="app">

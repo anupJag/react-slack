@@ -15,6 +15,7 @@ export default (props) => {
 
     const [errors, setErrors] = useState([]);
     const [loading, setLoading] = useState(false);
+    // eslint-disable-next-line
     const [userRef, setUserRef] = useState(firebase.database().ref(`users`));
 
     const { username, email, password, passwordConfirmation } = userDetails;
@@ -70,7 +71,7 @@ export default (props) => {
 
     const saveUser = createdUser => {
         return userRef.child(createdUser.user.uid).set({
-            name : createdUser.user.displayName,
+            name: createdUser.user.displayName,
             avatar: createdUser.user.photoURL
         });
     }
